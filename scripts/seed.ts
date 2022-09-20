@@ -8,9 +8,6 @@ export const fillDB = async () => {
   const pokemonList = await pokemonClient.listPokemons(0, 100);
 
   try {
-    console.log("response data");
-    console.log(pokemonList);
-
     const formattedPokemon = pokemonList.results.map((p, index) => ({
       name: (p as { name: string }).name,
       spriteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
@@ -21,7 +18,6 @@ export const fillDB = async () => {
     const response = await prisma.pokemon.createMany({
       data: formattedPokemon,
     });
-    console.log("response"), response;
   } catch (e) {
     console.log(e, "error");
   }

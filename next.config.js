@@ -2,16 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'raw.githubusercontent.com',
-        },
-      ],
-    },
-
+  images: {
+    domains: ['raw.githubusercontent.com'],
   },
   i18n: {
     locales: ["en"],
