@@ -16,8 +16,6 @@ model Pokemon {
   id String @id @default(uuid())
 
   name String @db.VarChar(255)
-  
-  description String @db.VarChar(255)
 
   spriteUrl String @db.VarChar(255)
 
