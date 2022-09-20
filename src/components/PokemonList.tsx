@@ -29,7 +29,7 @@ export default function PokemonList() {
       ) : (
         <>
           <h1 className="text-3xl font-bold pb-8">Pokemon list</h1>
-          <div className="sm:w-7/12 w-[19rem] h-10 relative py-8 sm:py-0 mb-8 ">
+          <div className="sm:w-4/12 w-[22rem] h-10 relative py-8 sm:py-0 mb-8 ">
             <input
               className=" rounded-3xl p-4 border-solid  bg-slate-600 w-full h-11 outline-none border-2 border-gray-300 font-bold placeholder:text-white placeholder:text-lg placeholder:font-bold"
               placeholder="Search for pokemons..."
