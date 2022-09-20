@@ -18,5 +18,7 @@ model Pokemon {
   name String @db.VarChar(255)
 
   spriteUrl String @db.VarChar(255)
+  
+  pokemonId String @db.VarChar(255) @unique
 
 }

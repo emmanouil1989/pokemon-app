@@ -13,9 +13,10 @@ export const fillDB = async () => {
       spriteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
         index + 1
       }.png`,
+      pokemonId: (index + 1).toString(),
     }));
     await prisma.pokemon.deleteMany();
-    const response = await prisma.pokemon.createMany({
+    await prisma.pokemon.createMany({
       data: formattedPokemon,
     });
   } catch (e) {
