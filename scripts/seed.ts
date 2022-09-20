@@ -14,7 +14,7 @@ export const fillDB = async () => {
         index + 1
       }.png`,
     }));
-
+    await prisma.pokemon.deleteMany();
     const response = await prisma.pokemon.createMany({
       data: formattedPokemon,
     });
