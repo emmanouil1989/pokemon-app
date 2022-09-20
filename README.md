@@ -7,7 +7,7 @@ Pokemon App. Tech Stack:
 * Railway
 
 
-To run the app locally you need a database and adding the url into `DATABASE_URL` environment variable.
+To run the app locally you need a database and adding the url into `DATABASE_URL` environment variable. App is hosted at vercel : https://pokemon-app-mocha-eta.vercel.app/
 
 
 
