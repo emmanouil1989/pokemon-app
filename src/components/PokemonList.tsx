@@ -13,7 +13,9 @@ export default function PokemonList() {
   const { data, isLoading, isSuccess } = trpc.useQuery([
     "search.pokemon",
     { search: value },
-  ]);
+  ],{
+    keepPreviousData: true,
+  });
 
   const router = useRouter();
   const onImageClick = (id: string) => {
