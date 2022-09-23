@@ -31,7 +31,7 @@ export default function PokemonList() {
       ) : (
         <>
           <h1 className="text-3xl font-bold pb-8">Pokemon list</h1>
-          <div className="sm:w-4/12 w-[22rem] h-10 relative py-8 sm:py-0 mb-8 ">
+          <div className="lg:w-4/12 w-[22rem] h-10 relative py-8 sm:py-0 mb-8 ">
             <input
               className=" rounded-3xl p-4 border-solid  bg-slate-600 w-full h-11 outline-none border-2 border-gray-300 font-bold placeholder:text-white placeholder:text-lg placeholder:font-bold"
               placeholder="Search for pokemons..."
@@ -45,7 +45,7 @@ export default function PokemonList() {
               viewBox="0 0 28 28"
               width="28px"
               height="28px"
-              className="absolute top-6 sm:top-2 right-4 bottom-2"
+              className="absolute top-10 sm:top-2 right-4 bottom-2"
             >
               <path
                 d="M11 2a9 9 0 1 0 3.88 17.123l5.777 5.777a3 3 0 0 0 4.243-4.243l-5.777-5.777A9 9 0 0 0 11 2zm-7 9a7 7 0 1 1 14 0 7 7 0 0 1-14 0zm14.032 5.618a9.054 9.054 0 0 1-1.414 1.414l5.453 5.453a1 1 0 0 0 1.414-1.414z"
