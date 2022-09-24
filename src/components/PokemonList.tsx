@@ -54,7 +54,7 @@ export default function PokemonList() {
             </svg>
           </div>
 
-          <ul className="grid xl:grid-cols-[150px_150px_150px_150px] lg:grid-cols-[150px_150px_150px] md:grid-cols-[150px_150px] grid-cols-[200px]  xl:auto-rows-[200px] lg:auto-rows-[200px]  md:auto-rows-[200px] auto-rows-[300px]  gap-8  h-full list-inside overflow-y-auto p-8">
+          <ul className="grid xl:grid-cols-[150px_150px_150px_150px] lg:grid-cols-[150px_150px_150px] md:grid-cols-[150px_150px] grid-cols-[200px]  xl:auto-rows-[200px] lg:auto-rows-[200px]  md:auto-rows-[200px] auto-rows-[300px]  gap-8  h-full list-inside overflow-y-auto overflow-x-hidden p-8">
             {data!.pokemons.map(
               ({ name, spriteUrl, pokemonId }: Pokemon, index) => (
                 <li key={name} className="h-full w-full  flex justify-center">
