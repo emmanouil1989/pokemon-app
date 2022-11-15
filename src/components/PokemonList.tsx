@@ -10,17 +10,24 @@ import { useDebounce } from "use-debounce";
 export default function PokemonList() {
   const [search, setSearch] = React.useState<string | undefined>(undefined);
   const [value] = useDebounce(search, 1000);
-  const { data, isLoading, isSuccess } = trpc.useQuery([
-    "search.pokemon",
-    { search: value },
-  ],{
-    keepPreviousData: true,
-  });
+  const { data, isLoading, isSuccess } = trpc.useQuery(
+    ["search.pokemon", { search: value }],
+    {
+      keepPreviousData: true,
+    }
+  );
 
   const router = useRouter();
   const onImageClick = (id: string) => {
     router.push(`/pokemon/${id}`);
   };
+  if (isLoading || !isSuccess) {
+    return <LoadingIndicator />;
+  }
+
+  if (!data || data.pokemons.length === 0) {
+    return <p>No pokemon found</p>;
+  }
   return (
     <div
       className={`flex flex-col justify-center h-full 
